@@ -12,6 +12,7 @@
 \usepackage{pifont}
 \usepackage{enumitem}
 \usepackage{qrcode}
+\usepackage{hyperref}
 
 % ---- Style tweaks ----
 \pagenumbering{gobble}
@@ -24,21 +25,29 @@
 
 \begin{document}
 
-\newcommand{\myname}{Roque}
-\newcommand{\mymiddlename}{ Ivan}
-\newcommand{\mylastname}{ Lopez}
+\newcommand{\cvsection}[1]{%
+    \section*{%
+        #1\hspace{0.5em}%
+        \leaders\hbox{\rule[0.5ex]{1pt}{0.4pt}}\hfill\kern0pt%
+    }%
+}
+
+
+\newcommand{\FirstName}{Roque}
+\newcommand{\MiddleName}{Ivan}
+\newcommand{\LastName}{Lopez}
 
 % ---- Header ----
 \begin{center}
-    {\Huge \bfseries \MakeUppercase{\myname \mymiddlename \mylastname}} \\[10pt]
+    {\Huge \bfseries \MakeUppercase {Roque Ivan Lopez}} \\[10pt]
     {\Large Project Manager \& AI Implementation Specialist} \\[6pt]    
     \faEnvelope\ Email: \href{mailto:roqueilopez@gmail.com}{roqueilopez@gmail.com} $|$ 
-    \faPhone\ Phone: \href{https://wa.me/message/UDT3S3HIATXDM1}{083 079 9336} $|$ 
+    \faPhone\ Mobile: \href{https://wa.me/message/UDT3S3HIATXDM1}{+353 (083) 079 9336} $|$ 
     \faMapPin\ Location: \href{https://share.google/zzGhtrte6JsxdfIUU}{Dublin, Ireland} \\
     
-    \faLinkedin\ LinkedIn: \href{https://www.linkedin.com/in/roqueilopez}{roqueilopez} $|$ 
-    \faGithub\ GitHub: \href{https://github.com/Ruxterlo}{@Ruxterlo} $|$
-    \faGlobe\ Website:\href{https://mi-cv-dinamico.com} { Interactive CV \qrcode[height=1cm]{https://mi-cv-dinamico.com}} \faMousePointer\
+    \faLinkedin\ LinkedIn: \href{https://www.linkedin.com/in/roqueilopez}{linkedin.com/in/roqueilopez} $|$ 
+    \faGithub\ GitHub: \href{https://github.com/Ruxterlo}{github.com/Ruxterlo} \\
+    \faGlobe\ AI-Interactive CV Website: \href{https://mi-cv-dinamico.com} {  \qrcode[height=1cm]{https://mi-cv-dinamico.com}} \faMousePointer\
 
 \end{center}
 
@@ -47,13 +56,13 @@
 \textbf{Availability \& Visa Information:} 1G Visa; Eligible to work full-time in Ireland with no restrictions. Notice period: two weeks.
 
 % ---- Professional Summary ----
-\section*{Professional Summary -----------------------------------------------------------}
+\cvsection{Professional Summary}
 Innovative professional with a Master’s in AI and  experience as a Software Architect, Key Account Manager, and System Implementer. Experienced in teaching, with a client-centric approach and a proven ability to deliver impactful solutions that enhance processes, transparency, and business growth. Recognized as a top-performing implementer, receiving both client commendations and company recognitions for successful system deliveries and rollouts. Led implementations for major franchises in Mexico, ensuring smooth rollouts that allowed staff to operate new systems from day one without disrupting business operations. Reduced database architecture timelines from four weeks to just one, accelerating system delivery and increasing client satisfaction. Skilled at designing and conducting formal training for franchise owners and employees, providing ongoing operational support, which strengthened client trust and secured contracts with at least four leading franchises. Streamlined client management by combining issue resolution and relationship building into a single role that previously required two full-time positions, eliminating inefficiencies and optimizing workload distribution. 
 
 % ---- Technology Skills ----
-\section*{Technology Skills ------------------------------------------------------------------}
-\begin{itemize}[leftmargin=1.2em]
+\cvsection{Technology Skills}
 \setlength{\itemsep}{-5pt}
+\begin{itemize}[leftmargin=1.2em]
     \item \textbf{SQL Management:} MySQL, PostgreSQL, SQL Server; queries, triggers, routines.
     \item \textbf{Python:} Data analysis, web scraping, automation, API development, and other libraries.
     \item \textbf{Business Intelligence (BI):} Dashboards, reports, data modelling, DAX queries with Power BI.
@@ -64,34 +73,33 @@ Innovative professional with a Master’s in AI and  experience as a Software Ar
 \textbf{Certifications:} TestOut PC Pro, TestOut Hybrid Server Pro: Core, TestOut Client Pro.
 
 % ---- Education ----
-\section*{Education ---------------------------------------------------------------------------}
-\textbf{2024--2025} $|$ National College of Ireland $|$ Dublin, Ireland $|$ MSc in Artificial Intelligence for Business
+\cvsection{Education}
+\textbf{2024--2025} $|$ National College of Ireland $|$ MSc in Artificial Intelligence for Business $|$ Dublin, Ireland
 
 \textbf{Key Modules:} AI \& Data Management, AI Strategy \& Implementation, Risk \& Sustainability.
 
     
 \vspace{0.2cm}
-\textbf{2024--2027} $|$ Ensign College $|$ Utah, USA $|$ BAS Information Technologies
+\textbf{2024--2027} $|$ Ensign College $|$ BAS Information Technologies $|$ Utah, USA
 
 \textbf{Key Modules:} Python, Cloud Computing, Networks, Databases, Linux, Cybersecurity.\
 
 
 \vspace{0.2cm}
-\textbf{2024--2025} $|$ Ensign College $|$ Utah, USA $|$ Technical Support Engineer
+\textbf{2024--2025} $|$ Ensign College $|$ Technical Support Engineer $|$ Utah, USA
 
 \textbf{Key Modules:} IT Support, Networks, Cloud Computing, Python Scripting.\
 
 \vspace{0.2cm}
-\textbf{2011--2014} $|$ AS Media Vocational Training Center $|$ Puebla, MX $|$
-BA in Business Image Consulting
+\textbf{2011--2014} $|$ AS Media Vocational Training Center $|$ BA in Business Image Consulting  $|$ Puebla, MX
 
 \textbf{Key Modules:} Communication, Project Management, Marketing, Psychology, Professional Protocol.\
 
 
 % ---- Work Experience ----
-\section*{Work Experience ------------------------------------------------------------------}
+\cvsection{Work Experience}
 
-\textbf{09/2022 -- Present} $|$ \textbf{Gauchos Dog Restaurant} $|$ Kitchen Worker 
+\textbf{09/2022 -- Present} $|$ Gauchos Dog Restaurant $|$ Kitchen Worker $|$ Dublin, Ireland
 \begin{itemize}
 \setlength{\itemsep}{-5pt}
     \item Implemented an automated inventory system that tracked stock, generated requisitions, and minimized shortages and unnecessary purchases, reducing lost sales due to stockouts by 60\%.
@@ -99,7 +107,7 @@ BA in Business Image Consulting
     \item Developed a customer Wi-Fi portal that preserved company network performance and cut internet expenses by 50\%.\
 \end{itemize}
 
-\textbf{01/2020 -- 07/2021} $|$ \textbf{Grupo Telnet} $|$ Key Account Manager
+\textbf{01/2020 -- 07/2021} $|$ Grupo Telnet  $|$ Key Account Manager $|$ Puebla, MX
 \begin{itemize}
 \setlength{\itemsep}{-5pt}
     \item Promoted from System Implementer due to efficient rollouts with zero reported issues.
@@ -107,7 +115,8 @@ BA in Business Image Consulting
     \item Closed major franchise deals in Mexico and internationally, boosting client system usage from 30\% to 90\%, restoring on-time payments and loyalty.\
 \end{itemize}
 
-\textbf{01/2018 -- 12/2020} $|$ \textbf{Grupo Telnet} $|$ Software Architect/Implementer \hfill  \
+\textbf{01/2018 -- 12/2020} $|$ Grupo Telnet $|$ Software Architect/Implementer  $|$ Puebla, MX
+
 \begin{itemize}
 \setlength{\itemsep}{-5pt}
     \item Led the creation of a dedicated Implementation Department, increasing operational efficiency by 40\% and enabling the company to handle 3x more client implementations.
@@ -116,7 +125,7 @@ BA in Business Image Consulting
 \end{itemize}
 
 % ---- Recent Projects ----
-\section*{Recent Projects --------------------------------------------------------------------}
+\cvsection{Recent Projects}
 \begin{itemize}[leftmargin=1.2em]
 \setlength{\itemsep}{-5pt}
   \item \textbf{HR \& Performance Prediction} -- Designed clustering models (K-Means) to match candidates with job postings and propose employee performance evaluation frameworks.
@@ -131,7 +140,7 @@ BA in Business Image Consulting
 \end{itemize}
 
 \begin{multicols}{2}
-\section*{Languages -----------------------}
+\cvsection{Languages}
 
 \begin{itemize} [leftmargin=1.2em]
 \setlength{\itemsep}{-5pt}
@@ -145,7 +154,7 @@ BA in Business Image Consulting
 
 \columnbreak
 
-\section*{Flexibility \& Mobility --------------}
+\cvsection{Flexibility \& Mobility}
 \begin{itemize}[leftmargin=0.2em]
 \setlength{\itemsep}{0pt}
     \item \faIcon{briefcase} \textbf{Travel:} Open to travel \& available to relocate.
@@ -154,9 +163,8 @@ BA in Business Image Consulting
 \end{itemize}
 \end{multicols}
 
-
-% ---- Hobbies ----
-\section*{Hobbies \& Interests--------------------------------------------------------------}
+% Sección solo para el outline
+\cvsection{Hobbies \& Interests}
 Lifelong learning \& reading, outdoor adventures (hiking \& swimming), travel, tech \& innovation, languages, networking \& investing, and volunteering (youth camps, church service, workshops).
 
 \end{document}
