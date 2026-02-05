@@ -13,6 +13,8 @@
 \usepackage{enumitem}
 \usepackage{qrcode}
 \usepackage{hyperref}
+\usepackage{xparse}   
+\usepackage{etoolbox} 
 
 % ---- Style tweaks ----
 \pagenumbering{gobble}
@@ -32,6 +34,23 @@
     }%
 }
 
+\RenewDocumentCommand{\cvsection}{ m o }{%
+    \IfNoValueTF{#2}{%
+        % Sin argumento opcional: mostrar sección normalmente
+        \section*{%
+            #1\hspace{0.5em}%
+            \leaders\hbox{\rule[0.5ex]{1pt}{0.4pt}}\hfill\kern0pt%
+        }%
+    }{%
+        % Con argumento opcional: si es 0, se oculta
+        \ifstrequal{#2}{0}{}{%
+            \section*{%
+                #1\hspace{0.5em}%
+                \leaders\hbox{\rule[0.5ex]{1pt}{0.4pt}}\hfill\kern0pt%
+            }%
+        }%
+    }%
+}
 
 \newcommand{\FirstName}{Roque}
 \newcommand{\MiddleName}{Ivan}
@@ -146,7 +165,7 @@ Innovative professional with a Master’s in AI and  experience as a Software Ar
   
   \item \textbf{Multilingual University Chatbot} -- Delivered a functional chatbot prototype enabling students to schedule exams, access FAQs, and check class calendars via text or voice in different languages.\\
 \end{itemize}
-
+\cvsection{}[0]
 \begin{multicols}{2}
 \cvsection{Languages}
 
